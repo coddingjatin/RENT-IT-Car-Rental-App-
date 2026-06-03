@@ -6,7 +6,7 @@ This project is a real-world simulation of a car rental business, built with cle
 
 ---
 
-## 🧠 Key Features
+## 🧠 Key Features 
 
 ### 👥 **Customer Functionality**
 - 🔐 **Register & Login** – Secure user authentication  
