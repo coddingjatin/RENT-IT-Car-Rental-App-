@@ -42,6 +42,32 @@ public class CarsFrame extends JFrame implements ActionListener {
         pan2.add(back);
         pan2.setBackground(new Color(103,128,159));
         add(pan2,BorderLayout.SOUTH);
+        JPanel pan3 = new JPanel();
+        pan3.setLayout(new GridLayout(2,1));
+        pan3.setBackground(Color.WHITE);
+        JButton home = new JButton("Home");
+        JButton back = new JButton("Back");
+        home.setBackground(Color.WHITE);
+        back.setBackground(Color.WHITE);
+        home.setForeground(Color.BLACK);
+        back.setForeground(Color.BLACK);
+        home.addActionListener(e -> {
+            this.dispose();
+            Home h = new Home();
+            h.setResizable(false);
+            h.setVisible(true);
+        });
+        back.addActionListener(e -> {
+            this.dispose();
+            Home h = new Home();
+            h.setResizable(false);
+            h.setVisible(true);
+        });
+        pan3.add(home);
+        pan3.add(back);
+        add(pan3,BorderLayout.EAST);
+        pack();
+        setLocationRelativeTo(null);
     }
     public void actionPerformed(ActionEvent e){
         String a = e.getActionCommand();

@@ -12,7 +12,7 @@ public class Login extends JFrame implements ActionListener {
     public Login(){
         super("Login");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setSize(370,200);
+        setSize(500,300);
         setLayout(new BorderLayout());
         JPanel p1 = new JPanel();
         p1.setLayout(new GridLayout(2,2));
@@ -44,6 +44,32 @@ public class Login extends JFrame implements ActionListener {
         p2.add(log);
         p2.add(can);
         add(p2,BorderLayout.SOUTH);
+        JPanel p3 = new JPanel();
+        p3.setLayout(new GridLayout(2,1));
+        p3.setBackground(Color.WHITE);
+        JButton back = new JButton("Back");
+        JButton home = new JButton("Home");
+        back.setBackground(Color.WHITE);
+        home.setBackground(Color.WHITE);
+        back.setForeground(Color.BLACK);
+        home.setForeground(Color.BLACK);
+        back.addActionListener(e -> {
+            this.dispose();
+            Home h = new Home();
+            h.setResizable(false);
+            h.setVisible(true);
+        });
+        home.addActionListener(e -> {
+            this.dispose();
+            Home h = new Home();
+            h.setResizable(false);
+            h.setVisible(true);
+        });
+        p3.add(back);
+        p3.add(home);
+        add(p3,BorderLayout.EAST);
+        pack();
+        setLocationRelativeTo(null);
     }
     public void actionPerformed(ActionEvent e) {
         String a = e.getActionCommand();
