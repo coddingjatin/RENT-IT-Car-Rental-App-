@@ -79,6 +79,32 @@ public class Register extends JFrame implements ActionListener {
         p.add(new JLabel(img));
         p.setBackground(Color.gray);
         add(p,BorderLayout.NORTH);
+        JPanel p3 = new JPanel();
+        p3.setLayout(new GridLayout(2,1));
+        p3.setBackground(Color.WHITE);
+        JButton back = new JButton("Back");
+        JButton home = new JButton("Home");
+        back.setBackground(Color.WHITE);
+        home.setBackground(Color.WHITE);
+        back.setForeground(Color.BLACK);
+        home.setForeground(Color.BLACK);
+        back.addActionListener(e -> {
+            this.dispose();
+            Home h = new Home();
+            h.setResizable(false);
+            h.setVisible(true);
+        });
+        home.addActionListener(e -> {
+            this.dispose();
+            Home h = new Home();
+            h.setResizable(false);
+            h.setVisible(true);
+        });
+        p3.add(back);
+        p3.add(home);
+        add(p3,BorderLayout.EAST);
+        pack();
+        setLocationRelativeTo(null);
     }
     public void actionPerformed(ActionEvent e) {
         String a = e.getActionCommand();
