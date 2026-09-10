@@ -26,7 +26,7 @@ public class CarRentalSystem extends JFrame implements ActionListener {
         b1 = new JButton("Rent A Car");
         b2 = new JButton("Add New Car");
         b3 = new JButton("Return Car");
-        b4 = new JButton("Search Car");
+        b4 = new JButton("Find Car");
         b5 = new JButton("Search Customer");
         b6 = new JButton("Logout");
         b1.setBackground(new Color(112,128,144));
@@ -83,7 +83,7 @@ public class CarRentalSystem extends JFrame implements ActionListener {
             AddCar cf=new AddCar();
             cf.setVisible(true);
         }
-        else if(ae.getActionCommand().equals("Search Car")) {
+        else if(ae.getActionCommand().equals("Find Car")) {
             this.dispose();
             SearchCar s=new SearchCar();
             s.setVisible(true);
